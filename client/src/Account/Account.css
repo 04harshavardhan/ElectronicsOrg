@@ -1,0 +1,103 @@
+.account-card {
+  align-items: center;
+}
+
+.account-icon {
+  font-size: 120px !important;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-actions span {
+  margin-right: 0.5em;
+}
+
+.email-verification-card {
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.email-verification-card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-verification-card .content span {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.email-verification-card .action-btn {
+  margin-top: 24px;
+}
+
+.card-form > * {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-form label {
+  color: var(--grey-mild);
+  opacity: 1;
+}
+
+input:placeholder-shown + label {
+  color: var(--grey-white);
+}
+
+.input-feild input {
+  border-radius: 2px;
+  background-color: var(--dark-1);
+  border: 1px solid var(--grey-white);
+  color: var(--grey-white);
+}
+
+.input-feild input:focus {
+  background-color: var(--dark-1);
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  box-shadow: none;
+}
+
+.input-feild.input-red input {
+  background-color: var(--dark-1);
+  color: var(--red);
+  border: 1px solid var(--red);
+  box-shadow: none;
+}
+
+.input-feild.input-red .form-text {
+  color: var(--red);
+}
+
+.input-feild .form-text {
+  color: var(--grey-mild);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--purple);
+  color: var(--purple);
+  background-color: var(--dark-1);
+  transition: background-color 10000s ease-in-out 0s;
+}

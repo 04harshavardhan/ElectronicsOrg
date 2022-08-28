@@ -1,0 +1,32 @@
+.app {
+  min-height: 100vh;
+}
+
+.alert-box {
+  pointer-events: none;
+
+  position: fixed;
+  left: 0;
+  top: 50px;
+  z-index: 1021; /* blame bootstrap for this */
+
+  width: 100%;
+  padding: 16px 0;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: transparent;
+}
+
+.alert {
+  pointer-events: all;
+
+  padding: 6px 12px;
+  border-radius: 4px;
+
+  background-color: var(--dark-1);
+
+  font-size: 12px;
+  color: var(--grey-white);
+}

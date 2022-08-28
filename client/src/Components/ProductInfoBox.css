@@ -1,0 +1,22 @@
+.info-box {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-box .star-icon {
+  color: var(--purple);
+}
+
+.product-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+}

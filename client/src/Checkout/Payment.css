@@ -1,0 +1,40 @@
+.payment-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.payment-page h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: var(--dark-1);
+}
+
+.payment-section,
+.payment-adress,
+.checkout-cart {
+  background-color: #ffffff;
+  padding: 16px;
+  max-width: 780px;
+  width: 100%;
+}
+
+.payment-adress .adress-line {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--dark-2);
+}
+
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-section .payment-form {
+  width: 640px;
+}

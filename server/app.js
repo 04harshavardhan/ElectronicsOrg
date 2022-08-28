@@ -6,12 +6,14 @@ import { products, createSession } from "./stripe.js";
 import { verifyUser } from "./firebase.js";
 
 dotenv.config();
-const clientOrigin = process.env.CLIENT_ORIGIN;
+const clientOrigin1 = process.env.CLIENT_ORIGIN_1;
+const clientOrigin2 = process.env.CLIENT_ORIGIN_2;
 
 const app = express();
 app.use(
   cors({
-    clientOrigin,
+    clientOrigin1,
+    clientOrigin2,
   })
 );
 app.use(express.json());

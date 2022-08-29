@@ -15,7 +15,9 @@ export default function useProducts() {
     (async () => {
       setLoadingProducts(() => true);
       try {
-        const query = await fetch("http://localhost:4000/products");
+        const query = await fetch(
+          "https://electronicsorg.herokuapp.com/products"
+        );
         const { products } = await query.json();
 
         setProducts(() => products);

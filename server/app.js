@@ -33,10 +33,11 @@ app.post("/checkout_session", async function (req, res) {
       });
       res.json({ paymentURL });
     } else {
+      console.log("not verfified");
       res.status(404).end();
     }
-  } catch (e) {
-    console.log(e);
+  } catch (error) {
+    console.log(error);
     res.status(404).end();
   }
 });

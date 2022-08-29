@@ -14,6 +14,10 @@ export default function Favorites() {
 
   const favoriteCards = favs.map((productId, i) => {
     const product = getProduct(productId);
+    if (product === undefined) {
+      return <></>;
+    }
+
     const inCart = checkInCart(productId);
     const inFavs = checkInFavs(productId);
 

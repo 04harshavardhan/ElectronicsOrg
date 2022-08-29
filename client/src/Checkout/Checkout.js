@@ -26,6 +26,10 @@ export default function Checkout() {
 
   const cartItems = cart.map((item, i) => {
     const product = getProduct(item.productId);
+    if (product === undefined) {
+      return <></>;
+    }
+
     const quantity = item.quantity;
 
     numOfItems += quantity;

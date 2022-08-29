@@ -6,16 +6,11 @@ import { products, createSession } from "./stripe.js";
 import { verifyUser } from "./firebase.js";
 
 dotenv.config();
-const clientOrigin1 = process.env.CLIENT_ORIGIN_1;
-const clientOrigin2 = process.env.CLIENT_ORIGIN_2;
+const port = parseInt(process.env.PORT);
+const clientOrigins = JSON.parse(process.env.CLIENT_ORIGINS);
 
 const app = express();
-app.use(
-  cors({
-    clientOrigin1,
-    clientOrigin2,
-  })
-);
+app.use(cors(clientOrigins));
 app.use(express.json());
 
 app.get("/products", async function (req, res) {
@@ -46,6 +41,6 @@ app.post("/checkout_session", async function (req, res) {
   }
 });
 
-app.listen(4000, function () {
-  console.log("Listening on port 4000. Go to http://localhost:4000");
+app.listen(port, function () {
+  console.log(`Listening on port ${port}.`);
 });

@@ -17,14 +17,17 @@ async function stripePayment({
   }));
 
   try {
-    const querry = await fetch("http://localhost:4000/checkout_session", {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ userIdToken, lineItems }),
-    });
+    const querry = await fetch(
+      "https://electronicsorg.herokuapp.com/checkout_session",
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userIdToken, lineItems }),
+      }
+    );
 
     if (!querry.ok) {
       makeAlert("Error! Could not redirect...");

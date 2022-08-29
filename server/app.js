@@ -6,7 +6,6 @@ import { products, createSession } from "./stripe.js";
 import { verifyUser } from "./firebase.js";
 
 dotenv.config();
-const port = parseInt(process.env.PORT);
 const clientOrigins = JSON.parse(process.env.CLIENT_ORIGINS);
 
 const app = express();
@@ -42,6 +41,6 @@ app.post("/checkout_session", async function (req, res) {
   }
 });
 
-app.listen(port, function () {
-  console.log(`Listening on port ${port}.`);
+app.listen(8080, function () {
+  console.log(`App started successfully`);
 });

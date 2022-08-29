@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import stripe from "stripe";
 
 dotenv.config();
-const clientOrigin1 = process.env.CLIENT_ORIGIN_1;
+const clientOrigins = JSON.parse(process.env.CLIENT_ORIGINS);
 
 const stripe_key = process.env.STRIPE_SECRET;
 
@@ -41,8 +41,8 @@ export async function createSession({
   cancel_url,
 }) {
   const session = await stripe_api.checkout.sessions.create({
-    success_url: clientOrigin1 + success_url,
-    cancel_url: clientOrigin1 + cancel_url,
+    success_url: clientOrigins[0] + success_url,
+    cancel_url: clientOrigins[0] + cancel_url,
     line_items,
 
     mode: "payment",

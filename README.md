@@ -8,4 +8,6 @@ Stripe checkout page was implemented seperately on express server hosted on a di
 
 The default verification email from firebase sometimes goes in to the spam folder. If i use a custom domain to send emails from this wouldn't happen.
 
+Here's the link to live app: https://electronicsorg-e1ab1.web.app/
+
 Anyways feel free to fork this project and use it.
